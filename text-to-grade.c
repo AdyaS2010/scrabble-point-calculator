@@ -1,68 +1,39 @@
 #include <cs50.h>
 #include <ctype.h>
-#include <math.h>
 #include <stdio.h>
 #include <string.h>
 
-int count_letters(string text);
-int count_words(string text);
-int count_sentences(string text);
-float grade_level(int letters, int sentences, int words);
+// Array of points assigned to each letter alphabetically as a constant
+int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+
+int compute_score(string word);
+string compute_winner(int score1, int score2);
 
 int main(void)
 {
-    // Prompt user for text -> passage, paragraph, sentence(s), etc...
-    string text = get_string("Text: ");
+    // Prompt user(s) for 2 words
+    string word1 = get_string("Player 1: ");
+    string word2 = get_string("Player 2: ");
 
-    // Count number of letters, words, sentences in given text
-    int letters = count_letters(text);
-    int words = count_words(text);
-    int sentences = count_sentences(text);
-    /*
-        printf("%i\n", letters);
-        printf("%i\n", words);
-        printf("%i\n", sentences);
+    // Compute score of each word
+    int score1 = compute_score(word1);
+    int score2 = compute_score(word2);
+
+    // Print the winner
+    string winner = compute_winner(score1, score2);
+
+    printf("%s\n", winner);
 }
 
-int count_letters(string text)
+int compute_score(string word)
 {
-    // Return number of letters in text
+    // Compute & return score for word
+    // ...
 
-    // Count letters
-    int letters = 0;
+    // Track score
+    int score = 0;
 
-    for (int i = 0, length = strlen(text); i < length; i++)
-    {
-        if (isalpha(text[i]))
-        {
-            letters++;
-        }
-    }
-    return letters;
-}
+    // Compute score character-wise (for each character)
 
-int count_words(string text)
-{
- 
-}
-
-int count_sentences(string text)
-{
-    int sentencecount = 0;
-
-    // Return number of words in text
-    for (int i = 0, length = strlen(text); i < length; i++)
-    {
-        // if (text[i] == 32)
-        if (text[i] == '.' || text[i] == '?' || text[i] == '!')
-        {
-            sentencecount++;
-        }
-    }
-    return sentencecount;
-}
-
-float grade_level(int letters, int sentences, int words)
-{
- 
+    return score;
 }
