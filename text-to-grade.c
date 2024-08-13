@@ -48,3 +48,19 @@ int compute_score(string word)
 
     return score;
 }
+
+string compute_winner(int score1, int score2)
+{
+    if (score1 > score2)
+    {
+        return "Player 1 wins!\n";
+    }
+    else if (score1 < score2)
+    {
+        return "Player 2 wins!\n";
+    }
+    else
+    {
+        return "Tie!\n";
+    }
+}
