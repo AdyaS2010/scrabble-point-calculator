@@ -38,6 +38,12 @@ Player 2: world
 Player 1 wins!
 ```
 
+![image](https://github.com/user-attachments/assets/3e19237c-2832-4de5-a881-5600eab43a81)
+
+![image](https://github.com/user-attachments/assets/2cfcff25-a6b1-40ab-a006-761df72e56ec)
+
+
+
 ## Contributing
 1. Fork the repository.
 2. Create a new branch:
